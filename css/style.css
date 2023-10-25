@@ -72,13 +72,15 @@ h6 {
     --main-text-color: #fff;
     --accent-text-color: #221c28;
     --main-bg-color: #3a4151;
-    --accent-color: #887ef4;
+    --accent-color: #f4f27e;
 }
 
 main {
     display: grid;
     place-items: center;
     height: 100vh;
+    background: linear-gradient(var(--main-bg-color), var(--accent-color));
+    font-weight: 600;
 }
 
 button {
@@ -87,42 +89,37 @@ button {
 
 .calculator-container {
     box-shadow: 0 0 1rem rgb(112, 112, 112);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.main-display {
-    background-color: var(--accent-color);
-    color: var(--main-text-color);
-    display: grid;
-    place-items: center;
-    font-size: 4rem;
-    padding: 5rem;
-}
-
-.expression-display {
-    display: flex;
-    align-items: center;
-    background-color: var(--main-text-color);
-    padding: 1.5rem 0;
-    font-size: 1.5rem;
+.display {
+    background-color: rgb(238, 251, 255);
     color: var(--accent-text-color);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 2rem;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-#clear-btn {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 50%;
-    font-size: 0.8rem;
+.display .prev-operand {
+    font-size: 1.5rem;
+    color: rgb(22, 22, 22, .75)
 }
 
-.expression {
-    display: block;
-    width: 80%;
+.display .current-operand {
+    font-size: 2rem;
+    color: var(--accent-text-color);
 }
 
 .keyboard {
     display: flex;
     flex-direction: column;
     gap: 0;
+    background-color: var(--main-bg-color);
 }
 
 .keyboard-row {
@@ -150,6 +147,6 @@ button {
 
 .key:hover {
     background-color: #3f4658;
-    transform: scale(1.03);
+    transform: scale(1.01);
     box-shadow: 0 0.5rem 1rem rgb(22, 22, 22);
 }

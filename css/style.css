@@ -22,6 +22,7 @@
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-family: 'Arial', sans-serif;
 }
 
 /*
@@ -65,4 +66,90 @@ h6 {
 #root,
 #__next {
     isolation: isolate;
+}
+
+:root {
+    --main-text-color: #fff;
+    --accent-text-color: #221c28;
+    --main-bg-color: #3a4151;
+    --accent-color: #887ef4;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+button {
+    cursor: pointer;
+}
+
+.calculator-container {
+    box-shadow: 0 0 1rem rgb(112, 112, 112);
+}
+
+.main-display {
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+    display: grid;
+    place-items: center;
+    font-size: 4rem;
+    padding: 5rem;
+}
+
+.expression-display {
+    display: flex;
+    align-items: center;
+    background-color: var(--main-text-color);
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    color: var(--accent-text-color);
+}
+
+#clear-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.expression {
+    display: block;
+    width: 80%;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.key {
+    border: solid 0.0006rem #41495c;
+    text-align: center;
+    flex-grow: 1;
+    padding: 1.5rem 2.5rem;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    width: 20%;
+    box-shadow: 0 0 0 rgb(69, 69, 69);
+    transition:
+        background-color 300ms ease-in-out,
+        transform 300ms ease-in-out,
+        box-shadow 300ms ease-in-out;
+}
+
+
+.key:hover {
+    background-color: #3f4658;
+    transform: scale(1.03);
+    box-shadow: 0 0.5rem 1rem rgb(22, 22, 22);
 }

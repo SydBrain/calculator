@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function clearExpression() {
         currentOperand = "";
         prevOperand = "";
-        operation = undefined;
+        selectedOperation = undefined;
     }
 
     function deleteNumber() {
